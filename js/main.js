@@ -77,14 +77,14 @@ let swiperFeatured = new Swiper('.featured__swiper', {
     centeredSlides:'auto',
 
     navigation:{
-        nextEl: 'swiper-button-next',
-        prevEl: 'swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 
-    autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
-    },
+    // autoplay:{
+    //     delay:3000,
+    //     disableOnInteraction:false,
+    // },
     
     breakpoints:{
         1150:{
