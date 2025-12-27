@@ -110,6 +110,26 @@ let swiperNew = new Swiper('.new__swiper', {
 })
 
 //testimonal swiper
+let swiperTestimonial = new Swiper('.testimonial__swiper',{
+    loop: true,
+    spaceBetween: 16,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
 
-
+    breakpoints: {
+        1150:{
+            slidesPerView: 3,
+            centeredSlides: false,
+        }
+    }
+})
+ 
 //show scroll up
+const scrollup = () =>{
+    const scrollUp = document.getElementById('scroll-up')
+    //When the scroll is higher than 350 viewpoint height, add the scroll-header class to the header tag
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+            :scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollup)
