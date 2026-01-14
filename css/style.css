@@ -195,6 +195,7 @@ body.dark-theme{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .nav__logo{
     display: inline-flex;
@@ -326,6 +327,7 @@ body.dark-theme{
     padding: 2rem 1.5rem;
     border: 2px solid var(--border-color);
     row-gap: 1.25rem;
+    /* position: relative; */
 }
 .login__title{
     font-size: var(--h2-font-size);
@@ -381,16 +383,7 @@ body.dark-theme{
 }
                     /* home */
 
-  /* .home {
-  min-height: calc(100vh - var(--header-height));
-  display: flex;
-  align-items: center;
-}  */
-
- /* .home.section {
-  padding-block: 0;
-}  */
-                  
+              
 .home__swiper{
     margin: initial;
     
@@ -404,17 +397,6 @@ body.dark-theme{
     text-align: center;
 }
 
-/* Ensure heading appears visually centered by adding top padding
-     Mobile: smaller padding, Desktop: larger padding */
-/* .home__data{
-    padding-top: 1rem;
-} */
-
-/* @media screen and (min-width: 1150px){
-    .home__data{
-        padding-top: 4rem;
-    }
-} */
 .home__title{
     font-size: var(--biggest-font-size);
     margin-bottom: 1rem;
@@ -438,6 +420,10 @@ body.dark-theme{
 .swiper-slide-duplicate-active{
     scale:1;
 }
+/* .home__images .swiper-wrapper{
+    gap: 1.5rem;
+} */
+
 
 
                     /* button */
@@ -929,10 +915,10 @@ body.dark-theme{
 @media screen and (min-width:1150px) {
     
     .section{
-        padding-block:7rem 2rem ;
+        padding-block:4rem 2rem ;
     }
     .nav{
-        height: calc(var(--header-height)+2rem);
+        height: calc(var(--header-height));
         column-gap: 4rem;
     }
     .nav__link i{
@@ -1052,6 +1038,7 @@ body.dark-theme{
     .show-scroll{
         bottom: 3rem;
     }
+   
 }
 
 @media screen and (min-width:1220px){
@@ -1062,7 +1049,7 @@ body.dark-theme{
     .home__container{
         grid-template-columns: 435px 745px;
         align-items: center;
-        padding-block: 7rem 2rem;
+        padding-block: 3rem 2rem;
     }
     .home__data{
         text-align: initial;
@@ -1074,4 +1061,28 @@ body.dark-theme{
     .home__img{
         width: 290px;
     }
+
+
+}
+/* ===== FIX LOGIN CLOSE BUTTON ON LARGE SCREENS ===== */
+@media screen and (min-width: 1150px){
+
+  .login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .login__close{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: none;
+    order: -1;          /* puts ❌ above the box */
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
 }
